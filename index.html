@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>她的专属宇宙</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 开场 -->
+  <div id="intro">
+    <div class="intro-inner">
+      <h1>欢迎来到<br>怡盟的宇宙</h1>
+      <p>一个只围绕她转的小宇宙 ✨</p>
+      <button id="enterBtn">点击开启 💫</button>
+    </div>
+  </div>
+
+  <!-- 漂浮导航 -->
+  <nav id="nav">
+    <a href="#hero">宇宙</a>
+    <a href="#countdown">纪念日</a>
+    <a href="#gallery">照片墙</a>
+    <a href="#games">小游戏</a>
+    <a href="#wish">情书</a>
+  </nav>
+
+  <!-- 星空背景 -->
+  <div id="stars"></div>
+  <div id="shootingStars"></div>
+
+  <main id="main" class="hidden">
+
+    <!-- 宇宙中心 -->
+    <section id="hero">
+      <div id="universe">
+        <div id="sun">
+          <span id="sunName"></span>
+          <small>整个宇宙的中心</small>
+        </div>
+        <div id="orbits"></div>
+      </div>
+      <div id="heroText">
+        <h1 id="heroTitle"></h1>
+        <p id="heroSub"></p>
+      </div>
+      <div class="scroll-hint">向下滚动 ↓</div>
+    </section>
+
+    <!-- 纪念日倒计时 -->
+    <section id="countdown" class="section">
+      <h2 class="sec-title">我们的纪念日</h2>
+      <p class="sec-sub" id="togetherDays"></p>
+      <div class="count-row">
+        <div class="count-box"><span id="cdDays">0</span><label>天</label></div>
+        <div class="count-box"><span id="cdHours">0</span><label>时</label></div>
+        <div class="count-box"><span id="cdMins">0</span><label>分</label></div>
+        <div class="count-box"><span id="cdSecs">0</span><label>秒</label></div>
+      </div>
+      <p class="count-label" id="countLabel"></p>
+    </section>
+
+    <!-- 照片墙 -->
+    <section id="gallery" class="section">
+      <h2 class="sec-title">每一段时光</h2>
+      <p class="sec-sub">点击宇宙里的星球，或直接浏览下面的照片墙</p>
+      <div id="periods"></div>
+    </section>
+
+    <!-- 小游戏 -->
+    <section id="games" class="section">
+      <h2 class="sec-title">互动小游戏</h2>
+      <div class="game-tabs">
+        <button class="game-tab active" data-game="catch">摘星星</button>
+        <button class="game-tab" data-game="quiz">默契大考验</button>
+        <button class="game-tab" data-game="capsule">情话盲盒</button>
+        <button class="game-tab" data-game="lantern">放飞心愿</button>
+      </div>
+
+      <div id="game-catch" class="game-panel active">
+        <p class="game-tip">30 秒内点中坠落的星星，把好运摘给她 💫</p>
+        <div class="game-top"><span>得分：<b id="catchScore">0</b></span><span>剩余：<b id="catchTime">30</b>s</span></div>
+        <div id="catchArea"></div>
+        <button id="catchStart" class="btn">开始摘星星</button>
+      </div>
+
+      <div id="game-quiz" class="game-panel">
+        <div id="quizBody"></div>
+      </div>
+
+      <div id="game-capsule" class="game-panel">
+        <p class="game-tip">点开盲盒，拆一句只对她说的话 💌</p>
+        <button id="capsuleBox" class="capsule">💌</button>
+        <p id="capsuleText" class="capsule-text"></p>
+      </div>
+
+      <div id="game-lantern" class="game-panel">
+        <p class="game-tip">写下想对她说的话，点亮一盏心愿灯放上星空 🏮</p>
+        <textarea id="lanternInput" maxlength="60" placeholder="例如：希望我们永远在一起"></textarea>
+        <button id="lanternBtn" class="btn">点亮心愿灯</button>
+        <div id="lanternSky"></div>
+      </div>
+    </section>
+
+    <!-- 情书 -->
+    <section id="wish" class="section">
+      <h2 class="sec-title">写给宇宙中心</h2>
+      <p class="sec-sub">宇宙很大，生命很长，但我的轨道，永远只有你一个</p>
+      <div class="love-letter">
+        <p id="letterText"></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with 💖 为她专属打造</p>
+    </footer>
+  </main>
+
+  <!-- 灯箱 -->
+  <div id="lightbox" class="hidden">
+    <div class="lb-inner">
+      <img id="lbImg" src="" alt="">
+      <p id="lbCaption"></p>
+    </div>
+    <button id="lbClose">×</button>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
